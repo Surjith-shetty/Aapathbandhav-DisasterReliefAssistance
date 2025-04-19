@@ -1,4 +1,5 @@
 import './App.css';
+import Alerts from './components/Alerts';
 import Home from './components/Home';
 import Navbarr from './components/Navbarr';
 import Navigation from './components/Navigation';
@@ -8,10 +9,10 @@ import {useState} from 'react' ;
 function App() {
   const [color,setColor]= useState("light");
 
-  const [headbg,setHeadbg]= useState("blue-100  ");
+  const [headbg,setHeadbg]= useState("blue-200  ");
   const [headtitle,setHeadtitle]= useState("blue-800");
   const [darkhead,setDarkhead]=useState("dark");    //Navigation
-  const [navmenbgcol,setNavmenbgcol]=useState("white");
+  const [navmenbgcol,setNavmenbgcol]=useState("blue-100");
   const [undcol,setUndcol]=useState("blue-800");
   const [navtxtcol,setNavtxtcol]=useState("blue-900");  //Navmenu
 
@@ -59,7 +60,8 @@ function App() {
     </nav>
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
       {/* <Navbarr/> */}
-      <Home />
+      {/* <Home /> */}
+      <Alerts/>
     </>
   );
 }
