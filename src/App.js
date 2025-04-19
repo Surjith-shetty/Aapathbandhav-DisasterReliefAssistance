@@ -11,6 +11,10 @@ function App() {
   const [headbg,setHeadbg]= useState("blue-100  ");
   const [headtitle,setHeadtitle]= useState("blue-800");
   const [darkhead,setDarkhead]=useState("dark");    //Navigation
+  const [navmenbgcol,setNavmenbgcol]=useState("white");
+  const [undcol,setUndcol]=useState("blue-800");
+  const [navtxtcol,setNavtxtcol]=useState("blue-900");  //Navmenu
+
   const Changemode = () =>
   {
     if(color=="light")
@@ -19,6 +23,9 @@ function App() {
       setHeadbg("blue-950");
       setHeadtitle("white");
       setDarkhead("light");
+      setNavtxtcol("white");
+      setNavmenbgcol("blue-900");
+      setUndcol("white");
     }
     else
     {
@@ -26,6 +33,9 @@ function App() {
     setHeadbg("blue-100");
     setHeadtitle("blue-800");
     setDarkhead("dark");
+    setNavtxtcol("blue-900");
+    setNavmenbgcol("white");
+    setUndcol("blue-800");
   }
 }
 
@@ -47,7 +57,7 @@ function App() {
         </div>
         </div>
     </nav>
-      <Navmenu />
+      <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
       {/* <Navbarr/> */}
       <Home />
     </>
@@ -55,3 +65,4 @@ function App() {
 }
 
 export default App;
+
