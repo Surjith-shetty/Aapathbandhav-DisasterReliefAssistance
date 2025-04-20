@@ -15,6 +15,11 @@ function App() {
   const [navmenbgcol,setNavmenbgcol]=useState("blue-100");
   const [undcol,setUndcol]=useState("blue-800");
   const [navtxtcol,setNavtxtcol]=useState("blue-900");  //Navmenu
+  const [ALertstxtcol,setALertstxtcol]= useState("blue-800");
+  const [alheadfoot,setAlheadfoot]=useState("black");
+  const [albg,setAlbg]=useState("50");
+  const [disashead,setDisashead]=useState("red");
+  const [alinfobg,setAlinfobg]=useState("white");  //alerts
 
   const Changemode = () =>
   {
@@ -27,6 +32,11 @@ function App() {
       setNavtxtcol("white");
       setNavmenbgcol("blue-900");
       setUndcol("white");
+      setALertstxtcol("white");
+      setAlheadfoot("white");
+      setAlbg("950");
+      setDisashead("orange");
+      setAlinfobg("gray-900");
     }
     else
     {
@@ -37,6 +47,11 @@ function App() {
     setNavtxtcol("blue-900");
     setNavmenbgcol("white");
     setUndcol("blue-800");
+    setALertstxtcol("blue-800");
+    setAlheadfoot("black");
+    setAlbg("50");
+    setDisashead("red");
+    setAlinfobg("white");
   }
 }
 
@@ -61,7 +76,7 @@ function App() {
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
       {/* <Navbarr/> */}
       {/* <Home /> */}
-      <Alerts/>
+      <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>
     </>
   );
 }
