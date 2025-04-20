@@ -1,5 +1,6 @@
 import './App.css';
 import Alerts from './components/Alerts';
+import GetHelp from './components/GetHelp';
 import Home from './components/Home';
 import Navbarr from './components/Navbarr';
 import Navigation from './components/Navigation';
@@ -7,9 +8,9 @@ import Navmenu from './components/Navmenu';
 import {useState} from 'react' ;
 
 function App() {
-  const [color,setColor]= useState("light");
+  const [color,setColor]= useState("light"); //switch mode
 
-  const [headbg,setHeadbg]= useState("blue-200  ");
+  const [headbg,setHeadbg]= useState("blue-200");
   const [headtitle,setHeadtitle]= useState("blue-800");
   const [darkhead,setDarkhead]=useState("dark");    //Navigation
   const [navmenbgcol,setNavmenbgcol]=useState("blue-100");
@@ -41,11 +42,11 @@ function App() {
     else
     {
     setColor("light");
-    setHeadbg("blue-100");
+    setHeadbg("blue-200");
     setHeadtitle("blue-800");
     setDarkhead("dark");
     setNavtxtcol("blue-900");
-    setNavmenbgcol("white");
+    setNavmenbgcol("blue-100");
     setUndcol("blue-800");
     setALertstxtcol("blue-800");
     setAlheadfoot("black");
@@ -76,7 +77,10 @@ function App() {
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
       {/* <Navbarr/> */}
       {/* <Home /> */}
-      <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>
+      {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
+      <GetHelp/>
+
+
     </>
   );
 }
