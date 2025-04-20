@@ -21,6 +21,12 @@ function App() {
   const [albg,setAlbg]=useState("50");
   const [disashead,setDisashead]=useState("red");
   const [alinfobg,setAlinfobg]=useState("white");  //alerts
+  const [reqtit,setReqtit]= useState("blue-800");
+  const [reqbg,setReqbg]= useState("blue-50");
+  const [formtxt,setFormtxt]= useState("black");
+  const [formbg,setFormbg]= useState("white");
+  const [forminpbg,setForminpbg]= useState("gray-900");
+  const [formplctxt,setFormplctxt]= useState("gray-900");
 
   const Changemode = () =>
   {
@@ -38,6 +44,12 @@ function App() {
       setAlbg("950");
       setDisashead("orange");
       setAlinfobg("gray-900");
+      setReqtit("white");
+      setReqbg("blue-950");
+      setFormtxt("white");
+      setFormbg("gray-900");
+      setForminpbg("gray-50");
+      setFormplctxt("white");
     }
     else
     {
@@ -53,6 +65,12 @@ function App() {
     setAlbg("50");
     setDisashead("red");
     setAlinfobg("white");
+    setReqtit("blue-800");
+    setReqbg("blue-50");
+    setFormtxt("black");
+    setFormbg("white");
+    setForminpbg("gray-900")
+    setFormplctxt("gray-900");
   }
 }
 
@@ -78,7 +96,7 @@ function App() {
       {/* <Navbarr/> */}
       {/* <Home /> */}
       {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
-      <GetHelp/>
+      <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>
 
 
     </>
