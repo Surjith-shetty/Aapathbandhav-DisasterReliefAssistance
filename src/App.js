@@ -6,6 +6,7 @@ import Navbarr from './components/Navbarr';
 import Navigation from './components/Navigation';
 import Navmenu from './components/Navmenu';
 import {useState} from 'react' ;
+import Volunteer from './components/Volunteer';
 
 function App() {
   const [color,setColor]= useState("light"); //switch mode
@@ -26,7 +27,9 @@ function App() {
   const [formtxt,setFormtxt]= useState("black");
   const [formbg,setFormbg]= useState("white");
   const [forminpbg,setForminpbg]= useState("gray-900");
-  const [formplctxt,setFormplctxt]= useState("gray-900");
+  const [formplctxt,setFormplctxt]= useState("gray-900");//help
+  const [Vreqbg,setVreqbg]= useState("blue-50");
+  const [stats,setStats]= useState("blue-900");
 
   const Changemode = () =>
   {
@@ -50,6 +53,8 @@ function App() {
       setFormbg("gray-900");
       setForminpbg("gray-50");
       setFormplctxt("white");
+      setVreqbg("gray-900");
+      setStats("blue-300");
     }
     else
     {
@@ -71,6 +76,8 @@ function App() {
     setFormbg("white");
     setForminpbg("gray-900")
     setFormplctxt("gray-900");
+    setVreqbg("blue-50");
+    setStats("blue-900");
   }
 }
 
@@ -96,8 +103,8 @@ function App() {
       {/* <Navbarr/> */}
       {/* <Home /> */}
       {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
-      <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>
-
+      {/* <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/> */}
+      <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} headtitle={headtitle} stats={stats}/>
 
     </>
   );
