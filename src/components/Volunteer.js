@@ -35,7 +35,7 @@ export default function Volunteer(props) {
             </div>
 
            
-            <div>
+            <div className={`form bg-${props.contactbg} px-5 py-3 rounded-2xl shadow-2xl`}>
               <h3 className={`text-2xl font-semibold text-${props.formtxt} mb-6`}>Sign Up to Volunteer</h3>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -90,11 +90,12 @@ export default function Volunteer(props) {
                     <option value="flexible">Flexible Schedule</option>
                   </select>
                 </div>
-
-                <button type="submit"
+                <div className='buttonalign' align="center">
+                <button type="submit" align="center"
                   className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-200">
                   Register as Volunteer
                 </button>
+                </div>
               </form>
             </div>
           </div>

@@ -116,14 +116,11 @@ function App() {
           <Route path="/home" element={<Home />}/>
           <Route path="/alerts" element={<Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>}/>
           <Route path="/getHelp" element={<GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>}/>
-          <Route path="/volunteer" element={<Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>}/>
+          <Route path="/home/getHelp" element={<GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>}/>
+          <Route path="/volunteer" element={<Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} contactbg={contactbg} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>}/>
+          <Route path="/home/volunteer" element={<Volunteer formbg={formbg} Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>}/>
           <Route path="/about" element={<About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} />}/>
       </Routes>
-      {/* <Home /> */}
-      {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
-      {/* <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/> */}
-      {/* <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/> */}
-      {/* <About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} /> */}
     </Router>
     </>
   );
