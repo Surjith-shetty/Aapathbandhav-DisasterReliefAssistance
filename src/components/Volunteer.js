@@ -42,12 +42,12 @@ export default function Volunteer(props) {
                   <div>
                     <label htmlFor="volunteer-name" className={`block text-sm font-medium text-${props.formtxt}`}>Full Name</label>
                     <input type="text" id="volunteer-name" placeholder="Your name"
-                      className={`mt-1 w-full text-${props.formplctxt} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  bg-${props.inputbg} text-${props.inputtxt}`} />
+                      className={`mt-1 w-full text-${props.formplctxt} bg-${props.frominpbg} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  `} />
                   </div>
                   <div>
                     <label htmlFor="volunteer-email" className={`block text-sm font-medium text-${props.formtxt}`}>Email Address</label>
                     <input type="email" id="volunteer-email" placeholder="Your email"
-                      className={`mt-1 w-full text-${props.formplctxt} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  bg-${props.inputbg} text-${props.inputtxt}`} />
+                      className={`mt-1 w-full text-${props.formplctxt} bg-${props.frominpbg} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  `} />
                   </div>
                 </div>
 
@@ -55,19 +55,19 @@ export default function Volunteer(props) {
                   <div>
                     <label htmlFor="volunteer-phone" className={`block text-sm font-medium text-${props.formtxt}`}>Phone Number</label>
                     <input type="tel" id="volunteer-phone" placeholder="Your contact number"
-                      className={`mt-1 w-full text-${props.formplctxt} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  bg-${props.inputbg} text-${props.inputtxt}`} />
+                      className={`mt-1 w-full text-${props.formplctxt} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  `} />
                   </div>
                   <div>
                     <label htmlFor="volunteer-location" className={`block text-sm font-medium text-${props.formtxt}`}>Location</label>
                     <input type="text" id="volunteer-location" placeholder="Your city and state"
-                      className={`mt-1 w-full text-${props.formplctxt} px-3 py-2 border border-gray-300  rounded-lg shadow-sm  bg-${props.inputbg} text-${props.inputtxt}`} />
+                      className={`mt-1 w-full text-${props.formplctxt} bg-${props.frominpbg} px-3 py-2 border border-gray-300  rounded-lg shadow-sm `} />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="volunteer-skills" className={`block text-sm font-medium text-${props.formtxt}`}>Skills & Experience</label>
                   <select id="volunteer-skills"
-                    className={`mt-1 w-full px-3 py-2 border border-gray-300 text-${props.formplctxt} rounded-lg shadow-sm  bg-${props.inputbg} text-${props.inputtxt}`}>
+                    className={`mt-1 w-full px-3 py-2 border border-gray-300 text-${props.formplctxt} bg-${props.frominpbg} rounded-lg shadow-sm `}>
                     <option value="" className={`text-${props.formplctxt}`} disabled selected>Select your primary skill</option>
                     <option value="medical">Medical (Doctor, Nurse, EMT)</option>
                     <option value="logistics">Logistics & Transportation</option>
@@ -81,7 +81,7 @@ export default function Volunteer(props) {
                 <div>
                   <label htmlFor="volunteer-availability" className={`block text-sm font-medium text-${props.formtxt}`}>Availability</label>
                   <select id="volunteer-availability"
-                    className={`mt-1 w-full px-3 py-2 border border-gray-300 text-${props.formplctxt} rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-blue-400 bg-${props.inputbg} text-${props.inputtxt}`}>
+                    className={`mt-1 w-full px-3 py-2 border border-gray-300 text-${props.formplctxt} bg-${props.frominpbg} rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-blue-400 bg-${props.inputbg} text-${props.inputtxt}`}>
                     <option value="" disabled selected>Select your availability</option>
                     <option value="oncall">On-call for Emergencies</option>
                     <option value="weekends">Weekends Only</option>

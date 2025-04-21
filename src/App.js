@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import Navmenu from './components/Navmenu';
 import {useState} from 'react' ;
 import Volunteer from './components/Volunteer';
+import About from './components/About';
 
 function App() {
   const [color,setColor]= useState("light"); //switch mode
@@ -30,6 +31,7 @@ function App() {
   const [formplctxt,setFormplctxt]= useState("gray-900");//help
   const [Vreqbg,setVreqbg]= useState("blue-50");
   const [stats,setStats]= useState("blue-900");
+  const [contactbg,setContactbg]= useState("blue-100");
 
   const Changemode = () =>
   {
@@ -55,6 +57,7 @@ function App() {
       setFormplctxt("white");
       setVreqbg("gray-900");
       setStats("blue-300");
+      setContactbg("gray-800");
     }
     else
     {
@@ -78,6 +81,7 @@ function App() {
     setFormplctxt("gray-900");
     setVreqbg("blue-50");
     setStats("blue-900");
+    setContactbg("blue-100");
   }
 }
 
@@ -100,11 +104,12 @@ function App() {
         </div>
     </nav>
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
-      {/* <Navbarr/> */}
-      {/* <Home /> */}
-      {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
-      {/* <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/> */}
-      <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} headtitle={headtitle} stats={stats}/>
+      <Navbarr/>
+      <Home />
+      <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>
+      <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>
+      <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>
+      <About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} />
 
     </>
   );
