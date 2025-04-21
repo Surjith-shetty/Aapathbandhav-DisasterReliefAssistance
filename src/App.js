@@ -104,7 +104,6 @@ function App() {
         </div>
     </nav>
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
-      <Navbarr/>
       <Home />
       <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>
       <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>
