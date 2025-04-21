@@ -9,6 +9,12 @@ import {useState} from 'react' ;
 import Volunteer from './components/Volunteer';
 import About from './components/About';
 
+import{
+  BrowserRouter as Router,
+  Routes,
+  Route,
+}from "react-router-dom";
+
 function App() {
   const [color,setColor]= useState("light"); //switch mode
 
@@ -30,8 +36,8 @@ function App() {
   const [forminpbg,setForminpbg]= useState("gray-900");
   const [formplctxt,setFormplctxt]= useState("gray-900");//help
   const [Vreqbg,setVreqbg]= useState("blue-50");
-  const [stats,setStats]= useState("blue-900");
-  const [contactbg,setContactbg]= useState("blue-100");
+  const [stats,setStats]= useState("blue-900"); //volunteer
+  const [contactbg,setContactbg]= useState("blue-100"); //about
 
   const Changemode = () =>
   {
@@ -103,13 +109,22 @@ function App() {
         </div>
         </div>
     </nav>
+    <Router>
       <Navmenu textcol={navtxtcol} bgcol={navmenbgcol} hov={undcol}/>
-      <Home />
-      <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>
-      <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>
-      <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>
-      <About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} />
-
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />}/>
+          <Route path="/alerts" element={<Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/>}/>
+          <Route path="/getHelp" element={<GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/>}/>
+          <Route path="/volunteer" element={<Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/>}/>
+          <Route path="/about" element={<About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} />}/>
+      </Routes>
+      {/* <Home /> */}
+      {/* <Alerts pageheadcol={ALertstxtcol} alinfobg={alinfobg} alheadfoot={alheadfoot} albg={albg} disashead={disashead}/> */}
+      {/* <GetHelp reqtit={reqtit} formplctxt={formplctxt} reqbg={reqbg} formtxt={formtxt} forminpbg={forminpbg} formbg={formbg}/> */}
+      {/* <Volunteer Vreqbg={Vreqbg} formplctxt={formplctxt} formtxt={formtxt} forminpbg={forminpbg} headtitle={headtitle} stats={stats}/> */}
+      {/* <About headtitle={headtitle} Vreqbg={Vreqbg} formtxt={formtxt} contactbg={contactbg} /> */}
+    </Router>
     </>
   );
 }
